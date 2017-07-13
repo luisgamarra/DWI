@@ -58,6 +58,7 @@
 </b:column>
   
   
+  <b:column sm="7" >
   
 
 
@@ -84,7 +85,10 @@
 
     </div>
 </div>
-
+</b:column>
+  
+  
+  <b:column sm="7">
 <div class="panel panel-default">
     <div class="panel-heading">
         <h3 class="panel-title">Adventure Information</h3>
@@ -94,7 +98,7 @@
         <a href="#">Inbox <span class="badge">42</span></a>
     </div>
 </div>
-
+</b:column>
 
 
 
