@@ -38,6 +38,27 @@
     <!-- /.container -->
 </b:navbar>
 
+  
+  <!--Menú-->
+<b:column sm="3" align="center">
+    <b:button context="primary" block="true" href="Menu.jsp">Menu</b:button>
+
+    <b:well>
+        <b:nav tabs="warpper">
+            <li ><a href="MisHistorias.jsp" >Mis Historias</a></li>
+            <li><a href="FotosyVideos.jsp" >Fotos y Videos</a></li>
+            <li><a href="OtrasHistorias.jsp" >Otras Historias</a></li>
+            <li><a href="Place.jsp" >Lugares Turisticos</a></li>
+            <li ><a href="ProfileUser.jsp" >Datos Personales</a></li>
+        </b:nav>
+    </b:well>
+
+    <b:image src="http://www.zonnebos.eu/wp-content/uploads/2016/05/person-256-b9a79eac8b2c2ba1caca8a0c0e6b9209263245b3d7f0c1f272d5b53a84f11867.png" shape="thumbnail" width="200" />
+
+</b:column>
+  
+  
+  
 
 
         <h1><p align="center"> Bienvenido Erick Rojas</p></h1>
