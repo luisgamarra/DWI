@@ -55,6 +55,8 @@
 
 </b:column>
 
+  
+<b:column sm="7">  
 <h1><p align="center"> Bienvenido Erick Rojas</p></h1>
 
 <div class="panel panel-default" >
@@ -90,7 +92,7 @@
 
     </div>
 </div>
-
+</b:column>
 
 
 
