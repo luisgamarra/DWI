@@ -38,7 +38,7 @@
     <li class="active"><a href="#" >Anuncios<span class="sr-only">(current)</span></a></li>
     <li class="active"><a href="Fotos_Videos.jsp">Historias</a></li>
     <li class="active"><a href="Otras_Histiorias.jsp">Lugares Historias</a></li>
-    <li><a href="#">Datos Personaless</a></li>
+    <li class="Active"><a href="#">Datos Personaless</a></li>
     </b:nav>
     </b:well>
         <b:image src="http://www.zonnebos.eu/wp-content/uploads/2016/05/person-256-b9a79eac8b2c2ba1caca8a0c0e6b9209263245b3d7f0c1f272d5b53a84f11867.png" shape="thumbnail" width="200" />
