@@ -11,7 +11,7 @@
 <html>
 <head>
   <jsp:include page="bootstrap.jsp"/>
-  <title>Welcome Bootstrap Developers</title>
+  <title>Mis Historias</title>
 </head>
 <body>
 
