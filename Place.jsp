@@ -5,7 +5,7 @@
   Time: 9:00 PM
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://bootstrapjsp.org/" prefix="b" %>
 <html>
 <head>
@@ -22,30 +22,23 @@
 <body>
 
 <!-- ----------------------------Navigation -------------------------------------------------------------->
-<b:navbar inverse="true" fixed="top">
-    <!-- Container -->
-    <b:container >
+<div class="container">
+    <header>
+        <nav class="navbar navbar-inverse navbar-static-top" role ="navigation">
 
-
-        <b:navbarbrand href="RegisterAccount.jsp">Adventure Page</b:navbarbrand>
-
-
-
-        <b:nav pull="right" >
-
-            <b:navbarbrand >About</b:navbarbrand>
-            <b:navbarbrand href="Place">Services</b:navbarbrand>
-            <b:navbarbrand >Contact</b:navbarbrand>
-            <b:navbarbrand >Ayuda</b:navbarbrand>
-            <button type="button" class="btn btn-default navbar-btn" href="Login.jsp">Cerrar Sesion</button>
-
-        </b:nav>
-    </b:container>
-    <!-- /.container -->
-</b:navbar>
+            <div class="header clearfix">
+                <nav>
+                    <ul class="nav nav-pills pull-right">
+                        <li role="presentation" ><a href="Principal.jsp">Cerrar Sesion</a></li>
+                    </ul>
+                </nav>
+                <a href="#" class="navbar-brand">Adventure Page</a>
+            </div>
+        </nav>
+    </header>
 
 <b:column sm="3" align="center">
-    <b:button context="primary" block="true" href="Menu.jsp">Menu</b:button>
+
 <!--Menu-->
     <b:well>
         <b:nav tabs="warpper">
@@ -69,12 +62,26 @@
 
 
 
-<b:column sm="7" align="center">
+<b:column sm="4" align="center">
 
     <div class="container">
-        <h2>Cuzco</h2><br><br>
 
 
+        <select>
+            <h2><option value="Cuzco">Cuzco</option>
+            <option value="Lima">Lima</option>
+            <option value="Ayacucho">Ayacucho</option>
+            <option value="LaLibertad">La Libertad</option>
+            </h2>
+        </select>
+
+
+
+        <h4>Información de Cuzco <br>
+            Parrafo 1
+        <br>
+            Parrafo 2
+        </h4>
 
 
 
