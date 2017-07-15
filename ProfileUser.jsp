@@ -16,33 +16,23 @@
 
 
 <!-- ----------------------------Navigation -------------------------------------------------------------->
-<b:navbar inverse="true" fixed="top">
-    <!-- Container -->
-    <b:container >
+<div class="container">
+    <header>
+        <nav class="navbar navbar-inverse navbar-static-top" role ="navigation">
 
-
-        <b:navbarbrand href="RegisterAccount.jsp">Adventure Page</b:navbarbrand>
-
-
-
-        <b:nav pull="right" >
-
-            <b:navbarbrand >About</b:navbarbrand>
-            <b:navbarbrand href="Place.jsp">Services</b:navbarbrand>
-            <b:navbarbrand >Contact</b:navbarbrand>
-            <b:navbarbrand >Ayuda</b:navbarbrand>
-            <button type="button" class="btn btn-default navbar-btn" href="Login.jsp">Cerrar Sesion</button>
-
-        </b:nav>
-    </b:container>
-    <!-- /.container -->
-</b:navbar>
-
+            <div class="header clearfix">
+                <nav>
+                    <ul class="nav nav-pills pull-right">
+                        <li role="presentation" ><a href="Principal.jsp">Cerrar Sesion</a></li>
+                    </ul>
+                </nav>
+                <a href="#" class="navbar-brand">Adventure Page</a>
+            </div>
+        </nav>
+    </header>
   
   <!--Menú-->
 <b:column sm="3" align="center">
-    <b:button context="primary" block="true" href="Menu.jsp">Menu</b:button>
-
     <b:well>
         <b:nav tabs="warpper">
             <li ><a href="MisHistorias.jsp" >Mis Historias</a></li>
