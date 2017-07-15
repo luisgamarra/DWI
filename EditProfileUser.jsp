@@ -32,8 +32,6 @@
     </header>
 
 <b:column sm="3" align="center">
-    <b:button context="primary" block="true" href="Menu.jsp">Menu</b:button>
-
     <b:well>
         <b:nav tabs="warpper">
             <li ><a href="MisHistorias.jsp" >Mis Historias</a></li>
