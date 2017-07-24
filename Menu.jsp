@@ -10,52 +10,55 @@
 <html>
 <head>
     <jsp:include page="bootstrap.jsp"/>
-    <title>Title</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <title>Menu</title>
 </head>
 <body>
 
-<b:navbar inverse="true" fixed="top">
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
 
-    <b:container >
-        <!-- Brand and toggle get grouped for better mobile display -->
-
-        <b:navbarbrand href="index.html">Page Adventure</b:navbarbrand>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-
-        <b:nav pull="right" >
-
-            <
-            <b:navbarbrand href=""><b:glyphicon type="user"/>  User</b:navbarbrand>
-            <b:navbarbrand href=""><b:glyphicon type="log-in"/>  cerrar Sesion</b:navbarbrand>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="">Page Adventure</a>
+        </div>
 
 
-        </b:nav>
-        <!-- /.navbar-collapse -->
-    </b:container>
-    <!-- /.container -->
-</b:navbar>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-<b:column sm="3" align="center">
-    <b:button context="primary" block="true" href="Menu.jsp">Menu</b:button>
 
-        <b:well>
-        <b:nav tabs="warpper">
-        <li ><a href="MisHistorias.jsp" >Mis Historias</a></li>
-        <li><a href="FotosyVideos.jsp" >Fotos y Videos</a></li>
-        <li><a href="OtrasHistorias.jsp" >Otras Historias</a></li>
-        <li><a href="LugaresTuristicos.jsp" >Lugares Turisticos</a></li>
-        <li><a href="DatosPersonales.jsp" >Datos Personales</a></li>
-        </b:nav>
-        </b:well>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><b:glyphicon type="user"/> <c:out value="${user.name}"/></a></li>
+                <li><a href="#"><b:glyphicon type="log-in"/> Cerrar Sesión</a></li>
 
-    <b:image src="http://www.zonnebos.eu/wp-content/uploads/2016/05/person-256-b9a79eac8b2c2ba1caca8a0c0e6b9209263245b3d7f0c1f272d5b53a84f11867.png" shape="thumbnail" width="200" />
+            </ul>
+        </div>
+    </div>
+</nav>
 
-</b:column>
 
-<b:column sm="9" align="center">
+<div id="wrapper">
 
-    <h1>BIENVENIDO ..........</h1>
-</b:column>
+    <jsp:include page="menuleft.jsp"/>
+
+</div>
+
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+</script>
+
 </body>
 </html>
