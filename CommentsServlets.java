@@ -73,7 +73,16 @@ public class CommentsServlets extends HttpServlet {
         String actionUri;
         switch(action) {
            
+            case "delete": {
 
+                Comment comment = new Comment();
+                comment.setId(Integer.parseInt(request.getParameter("idc")));
+                service.deleteComments(comment);
+
+                actionUri = "/MisHistorias.jsp";
+
+                break;
+            }
             
 
             default:
