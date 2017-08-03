@@ -127,4 +127,19 @@ public class APDataStore {
         return getStoriesEntity().findByDifUserId(id,getAccountsEntity(),getUsersEntity(),getPlacesEntity(),getMediacontentsEntity());
     }
 
+public Account findAccountById(int id) {
+        return getAccountsEntity().findById(id);
+    }
+
+    public boolean updateAccount(Account account) {
+        return getAccountsEntity().update(account);
+    }
+
+    public boolean createAccount(Account account) {
+        return getAccountsEntity().add(account);
+    }
+
+public Place findPlaceById(int id) {
+        return getPlacesEntity().findById(id);
+    }
 }
