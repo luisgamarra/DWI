@@ -2,7 +2,7 @@
 <%@ taglib prefix="b" uri="http://bootstrapjsp.org/" %>
 <%--
   Created by IntelliJ IDEA.
-  User: metro
+  User: Lucero
   Date: 28/07/2017
   Time: 18:54
   To change this template use File | Settings | File Templates.
