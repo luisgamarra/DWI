@@ -51,5 +51,21 @@ public class APService {
     public boolean deleteCommentsbyStoryId(Comment comment) { return getDataStore().deleteCommentbyStoryId(comment); }
     public boolean deleteComments(Comment comment) { return getDataStore().deleteComment(comment); }
 
+    public List<Place> getPlaces() {return getDataStore().findAllPlaces();}
+        
+    public Place getPlaceByName(String name){
+        return  getDataStore().findByName(name);
+    }
+    
+  public Place getPlaceById(int id) {
+        return getDataStore().findPlaceById(id);
+    }
 
+    public Place getPlaceById(String id) {
+        return getDataStore().findPlaceById(Integer.parseInt(id));
+    }
+
+    public User getUserByNamePass(String name,String pass){
+        return getDataStore().finUserByNamePass(name,pass);
+    }
 }
