@@ -106,4 +106,25 @@ public class APDataStore {
     public boolean createMedia(Media_content media_content) {
         return getMedia_contentsEntity().add(media_content);
     }
+    
+       public List<Comment> findCommentByStoryid(int id) {
+        return getCommentsEntity().findByStoryId(id,getAccountsEntity(),getUsersEntity(),getPlacesEntity(),getStoriesEntity(),getMediacontentsEntity());
+    }
+
+    public boolean createComment(Comment comment) {
+        return getCommentsEntity().add(comment);
+    }
+
+    public boolean deleteCommentbyStoryId(Comment comment) {
+        return getCommentsEntity().deletebyStoryId(comment);
+    }
+
+    public boolean deleteComment(Comment comment) {
+        return getCommentsEntity().delete(comment);
+    }
+    
+    public List<Story> findStoryByDifUserid(int id) {
+        return getStoriesEntity().findByDifUserId(id,getAccountsEntity(),getUsersEntity(),getPlacesEntity(),getMediacontentsEntity());
+    }
+
 }
