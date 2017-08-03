@@ -42,6 +42,14 @@ public class APService {
     public List<Account> findAllAccount() {
         return getDataStore().findAllAccounts();
     }
+    
+    
+    public List<Comment> getCommentByStoryid(int id){
+        return getDataStore().findCommentByStoryid(id);
+    }
+    public boolean createComment(Comment comment) { return getDataStore().createComment(comment); } 
+    public boolean deleteCommentsbyStoryId(Comment comment) { return getDataStore().deleteCommentbyStoryId(comment); }
+    public boolean deleteComments(Comment comment) { return getDataStore().deleteComment(comment); }
 
 
 }
