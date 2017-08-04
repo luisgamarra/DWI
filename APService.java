@@ -27,7 +27,20 @@ public class APService {
             e.printStackTrace();
         }
     }
+ 
+    public APService() {
+        try {
+            InitialContext ctx = new InitialContext();
+            connection = ((DataSource) ctx.lookup("jdbc/MySQLDataSource"))
+                    .getConnection();
+        } catch (NamingException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
+    }
+    
     private Connection getConnection() {
         return connection;
     }
