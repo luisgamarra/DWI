@@ -85,5 +85,9 @@ public class CommentsEntity extends BaseEntity {
                 "'" + id + "'";
         return change(sql);
     }
+    
+    public List<Comment> findByStoryId(int id, AccountsEntity accountsEntity, UsersEntity usersEntity, PlacesEntity placesEntity,StoriesEntity storiesEntity,MediacontentsEntity mediacontentsEntity) {
+        return findByCriteria("story_id ="+id,usersEntity,accountsEntity,placesEntity,storiesEntity,mediacontentsEntity);
+    }
 
 }
