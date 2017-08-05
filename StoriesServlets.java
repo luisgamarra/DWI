@@ -1,6 +1,5 @@
 package pe.adventurepage.viewcontrollers;
 
-import org.omg.CORBA.Request;
 import pe.adventurepage.models.*;
 import pe.adventurepage.services.APService;
 
@@ -11,7 +10,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -28,7 +26,41 @@ public class StoriesServlets extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
         switch(action) {
+            case "update": {
 
+                User user = new User();
+                Place place=new Place();
+                Mediacontent mediacontent=new Mediacontent();
+                Story story = service.getStoryById(request.getParameter("idh"));
+                story.setName(request.getParameter("title"));
+                story.setDescription(request.getParameter("description"));
+               /* story.setStory_date(("2017-01-01"));*/
+                story.setUser(user.setId(1));
+                story.setPlace(place.setId(1));
+                story.setMediacontent(mediacontent.setId(1));
+                String message = service.updateStory(story) ?
+                        "Update success" :
+                        "Error while updating";
+                log(message);
+
+                /*Mediacontent mediacontent = service.getMediaById(Integer.parseInt(request.getParameter("idh")));
+                mediacontent.setName(request.getParameter("foto"));
+                mediacontent.setUrl(request.getParameter("url"));
+                String messages = service.updateMedia(mediacontent)?
+                        "update success":
+                        "Error while updating";
+                log(messages);*/
+                break;
+            }
+           /*case "delete":{
+
+               Story story = service.getStoryById(request.getParameter("idhis"));
+               String message = service.deleteStory(story) ?
+                       "delete success" :
+                       "Error while deleting";
+               log(message);
+
+            }*/
             case "create": {
 
 
@@ -57,11 +89,11 @@ public class StoriesServlets extends HttpServlet {
                         "Error while creating";
                 log(message);
 
+                break;
 
             }
 
-
-                 }
+        }
         RequestDispatcher dispatcher =
                 request.getRequestDispatcher(STORIES_INDEX_URI);
         dispatcher.forward(request, response);
@@ -78,8 +110,13 @@ public class StoriesServlets extends HttpServlet {
                 request.setAttribute("action", "add");
                 break;
             }
-
-
+            case "edit": {
+                Story story = service.getStoryById(request.getParameter("idh"));
+                request.setAttribute("story", story);
+                request.setAttribute("action", "edit");
+                actionUri = STORIES_EDIT_URI;
+                break;
+            }
 
             default:
                     /*actionUri = ACCOUNTS_INDEX_URI*/
