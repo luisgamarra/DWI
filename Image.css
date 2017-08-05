@@ -1,0 +1,27 @@
+body {
+
+    /* Ubicación de la imagen */
+
+    background-image: url(Imagenes/bienvenida6.jpg);
+
+    /* Para dejar la imagen de fondo centrada, vertical y
+
+    horizontalmente */
+
+    background-position: center center;
+
+    /* Para que la imagen de fondo no se repita */
+
+    background-repeat: no-repeat;
+
+    /* La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador */
+
+    background-size: cover;
+
+    /* Se muestra un color de fondo mientras se está cargando la imagen
+
+    de fondo o si hay problemas para cargarla */
+
+    background-color: #8c8c8c;
+
+}
