@@ -118,6 +118,42 @@ public class StoriesServlets extends HttpServlet {
                 break;
             }
 
+            case "list": {
+                Story story = service.getStoryById(Integer.parseInt(request.getParameter("id")));
+                request.setAttribute("story", story);
+                request.setAttribute("action", "list");
+                actionUri = "/VerHistoria.jsp";
+                break;
+            }
+
+            case "delete": {
+
+                Comment comment = new Comment();
+                comment.setId(Integer.parseInt(request.getParameter("idh")));
+                service.deleteCommentsbyStoryId(comment);
+
+                Story story = new Story();
+                story.setId(Integer.parseInt(request.getParameter("idh")));
+                service.deleteStory(story);
+
+                    Mediacontent mediacontent = new Mediacontent();
+                    mediacontent.setId(Integer.parseInt(request.getParameter("idh")));
+                    String message2 = service.deleleMedia(mediacontent) ?
+                           "delete success" :
+                            "Error while deleting";
+                    log(message2);
+
+                actionUri = "/MisHistorias.jsp";
+
+                break;
+            }
+            case "list2": {
+                Story story = service.getStoryById(Integer.parseInt(request.getParameter("id")));
+                request.setAttribute("story", story);
+                request.setAttribute("action", "list2");
+                actionUri = "/Comentarios.jsp";
+                break;
+            }
             default:
                     /*actionUri = ACCOUNTS_INDEX_URI*/
                 actionUri = STORIES_INDEX_URI;
